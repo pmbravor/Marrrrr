@@ -1,0 +1,292 @@
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    text-align: left;
+    display: flex;
+}
+#bloque {
+    width: 960px;
+    margin: 15px auto;
+    text-align: left;
+}
+header, section, footer, aside, nav, article{
+    display: block;
+}
+#cabecera {
+    background: rgb(0, 32, 41);
+    padding: 20px;
+    /* Margenes superiores redondeados */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    text-align: center;
+}
+.titulo1{
+    font-family: Times;
+    font-size: 40px;
+    color: white;
+}
+#navegacion {
+    background: #bcb7b5;
+    text-align: center;
+    /* Margenes inferiores redondeados */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li{
+    display: inline-block;
+    width: 317px;
+}
+#menu ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+}
+#menu ul li a:hover{
+    background-color: #fff2ce;
+}
+a{
+    text-decoration: none;
+    font-family: Arial;
+    color: black;
+    font-weight: bold;
+}
+#seccion {
+    float: left;
+    width: 960px;
+}
+article {
+    position: relative;
+    background: #024045;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+/*  EFECTO DE VOLTEO */
+.efecto-volteo-container {
+    display: flex; /* Contenedor flexible */
+    align-items: center;
+}
+
+.efecto-volteo {
+    width: 300px;
+    height: 200px;
+    background-color: #f2cb09;
+    perspective: 1000px;
+    cursor: pointer; /* El cursor se posiciona como elemento interactivo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s, color 0.5s, background-color 0.5s; /* Tiempo que demora el volteo */
+    position: relative;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.efecto-volteo::before {
+    content: attr(data-texto1); /* Asigna el texto1 */
+    position: absolute;
+    font: Arial;
+    font-size: 15pt;
+    font-weight: bold;
+    color: #012426;
+    text-align: center;
+}
+
+.efecto-volteo:hover {
+    transform: rotateY(180deg); /* El contenedor gira 180° */
+    color: black;
+    background-color: rgb(164, 214, 250); /* Cambia el color */
+}
+
+.efecto-volteo:hover::before {
+    content: attr(a); /* Cambia el texto1 al texto2 */
+    transform: rotateY(180deg);
+    color: black;
+}
+
+.efecto-volteo a {
+    opacity: 0; /*se oculta el link*/
+    transition: opacity 0.5s ease-in-out;
+    transform: rotateY(180deg); /*revoltea para que no se vea el texto inversamente*/
+    text-decoration: none;
+    color: white;
+    font: Arial;
+    font-size: 20pt;
+    font-weight: bold;
+}
+  
+  .efecto-volteo:hover a {
+    opacity: 1;/*se vuelve a ver el link*/
+    color: white;
+    font: Arial;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.titulo2 {
+    font-family: 'Lucida Sans';
+    font-size: 25px;
+    color: #040c43;
+}
+.titulo3 {
+    font-family: 'Lucida Sans';
+    text-align: center;
+    font-size: 25px;
+    color: rgb(86, 86, 155);
+}
+.fotoperfil img{
+    width: 70px;
+    height: 0px;
+}
+.fotoperfil{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 10px solid white;
+    position: absolute;
+    top: 0; /* Pegar al borde superior del contenedor */
+    left: 0;
+    margin-left: 400px;
+    margin-top: -10%; /* Saca la foto del contenedor hacia arriba */
+}
+h2 {
+    text-align: left;
+    font-family: verdana;
+    font-style: bold;
+    font-size: 30pt;
+    color: white;
+    width: 100%;
+}
+#inferior {
+    background: #bcb7b5;
+    color: white;
+    text-align: center;
+    float:inline-end;
+    width: 960px;
+    margin-top: -15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+#inferior2 {
+    background: rgb(86, 86, 155);
+    color: white;
+    text-align: center;
+    float:inline-end;
+    width: 960px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+#inferior:hover{
+    background-color: rgb(73, 153, 121);
+}
+#inferior2:hover{
+    background-color: rgb(73, 153, 121);
+}
+.fac{
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+}
+.ins {
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+}
+.x{
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+}
+.tik{
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+}
+#pie {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+p{
+    color: rgb(121, 121, 121);
+}
+#mapa{
+    width: 200px;
+    height: 200px;
+}
+.datostec {
+    display: flex; /* Utiliza Flexbox para distribuir los elementos en línea */
+}
+.izquierda {
+    flex: 1; /* Hace que la sección izquierda ocupe todo el espacio disponible */
+}
+.fin {
+    color:rgb(86, 86, 155);
+    font-size: 11pt;
+    text-align: center;
+}
+.derecha {
+    /* Puedes ajustar este ancho según tus necesidades */
+    width: 300px;
+}
+
+
+/* INICIO: CSS pagina de fotos */
+#seccionfotos {
+    float: left;
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#seccionfotos img{
+    width: calc(33.33% - 10px); /* Calcula el ancho de cada imagen para ocupar un tercio del contenedor con el espacio entre las imágenes */
+    height: auto;
+    object-fit: cover;
+    margin-top: 5px;
+}
+/* FINAL: CSS pagina de fotos */
+
+/* INICIO: CSS pagina de videos */
+video{
+    width: 100%; 
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+/* FINAL: CSS pagina de videos */
+
+dt{
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 250px;
+    height: 45px;
+    border-radius: 30px;
+    line-height: 2;
+    background-color: rgb(255, 93, 93);
+    font-size: 15pt;
+    position: absolute;
+    margin: 0;
+    margin-top: 25px;
+    margin-left: -7%; /* Saca la etiqueta del contenedor hacia la izquierda */
+}
+dd{
+    font-family: 'Lucida Sans';
+    font-size: 14pt;
+    color: rgb(86, 86, 155);
+    font-weight: bold;
+}
